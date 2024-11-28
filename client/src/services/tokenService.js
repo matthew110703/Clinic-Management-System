@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const tokenAPIEndpoint = `${import.meta.env.VITE_SERVER_URL}/tokens`;
+const tokenAPIEndpoint = `${
+  import.meta.env.VITE_SERVER_URL ||
+  "https://clinic-management-system-jt8f.onrender.com"
+}/tokens`;
 
 // Fetch all tokens by present date
 export const fetchTokens = async (status = "") => {

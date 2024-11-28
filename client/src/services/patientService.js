@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const patientAPIEndpoint = `${import.meta.env.VITE_SERVER_URL}/patients`;
+const patientAPIEndpoint = `${
+  import.meta.env.VITE_SERVER_URL ||
+  "https://clinic-management-system-jt8f.onrender.com"
+}/patients`;
 
 // Register a new patient
 export const registerPatient = async (patient) => {

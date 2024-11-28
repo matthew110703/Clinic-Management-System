@@ -1,6 +1,9 @@
 import { io } from "socket.io-client";
 
-const SOCKET_URL = `${import.meta.env.VITE_SERVER_URL}`;
+const SOCKET_URL = `${
+  import.meta.env.VITE_SERVER_URL ||
+  "https://clinic-management-system-jt8f.onrender.com"
+}`;
 
 const socket = io(SOCKET_URL, {
   reconnection: true,

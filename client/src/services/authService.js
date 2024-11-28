@@ -1,5 +1,8 @@
 import axios from "axios";
-const serverEndpoint = `${import.meta.env.VITE_SERVER_URL}/auth`;
+const serverEndpoint = `${
+  import.meta.env.VITE_SERVER_URL ||
+  "https://clinic-management-system-jt8f.onrender.com"
+}/auth`;
 
 // Verify User Token
 export const verifyUser = async (token) => {

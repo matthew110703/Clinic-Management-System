@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const userEndpoint = `${import.meta.env.VITE_SERVER_URL}/users`;
+const userEndpoint = `${
+  import.meta.env.VITE_SERVER_URL ||
+  "https://clinic-management-system-jt8f.onrender.com"
+}/users`;
 
 // Function to fetch user profile
 export const getUserProfile = async (id) => {

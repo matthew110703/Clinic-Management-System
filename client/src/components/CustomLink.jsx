@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { colors } from "../meta-data";
+import { Link } from "react-router-dom";
 
 const CustomLink = ({
   children,
@@ -10,8 +11,8 @@ const CustomLink = ({
   icon,
 }) => {
   return (
-    <a
-      href={to}
+    <Link
+      to={to}
       onClick={onClick}
       className={`flex items-center text-md gap-0.5 text-${color} ${
         color === "text" && "hover:text-primary"
@@ -19,7 +20,7 @@ const CustomLink = ({
     >
       {children}
       {icon}
-    </a>
+    </Link>
   );
 };
 
